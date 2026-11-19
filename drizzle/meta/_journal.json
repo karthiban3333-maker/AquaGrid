@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1789533560391,
+      "tag": "0000_condemned_karen_page",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1789533876600,
+      "tag": "0001_blue_scarlet_witch",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1789544262636,
+      "tag": "0002_special_wind_dancer",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "5",
+      "when": 1789574330871,
+      "tag": "0003_phase1_data_sources",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "5",
+      "when": 1789574230871,
+      "tag": "0004_recommendation_provenance",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "5",
+      "when": 1789574330872,
+      "tag": "0005_geology_and_structures",
+      "breakpoints": true
+    }
+  ]
+}

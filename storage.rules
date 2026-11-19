@@ -1,0 +1,18 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    function signedIn() { return request.auth != null; }
+    function role(name) { return signedIn() && request.auth.token.role == name; }
+    function fieldStaff() { return role('facilitator') || role('village_representative') || role('officer') || role('technical_expert') || role('admin'); }
+
+    match /field-media/{villageId}/{allPaths=**} {
+      allow read: if fieldStaff();
+      allow write: if fieldStaff() && request.resource.size < 10 * 1024 * 1024 && request.resource.contentType.matches('image/.*|audio/.*');
+    }
+
+    match /public-summaries/{allPaths=**} {
+      allow read: if true;
+      allow write: if role('admin') || role('officer');
+    }
+  }
+}

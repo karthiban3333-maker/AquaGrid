@@ -1,0 +1,19 @@
+services:
+  geo-engine:
+    build: ./geo-engine
+    ports:
+      - "8000:8000"
+    environment:
+      PLANETARY_COMPUTER_STAC_URL: ${PLANETARY_COMPUTER_STAC_URL:-https://planetarycomputer.microsoft.com/api/stac/v1/search}
+      CHIRPS_EXPORT_URL: ${CHIRPS_EXPORT_URL:-}
+      OPENTOPOGRAPHY_API_KEY: ${OPENTOPOGRAPHY_API_KEY:-}
+
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      GEO_ENGINE_URL: http://geo-engine:8000
+      DATABASE_URL: ${DATABASE_URL:-}
+    depends_on:
+      - geo-engine
