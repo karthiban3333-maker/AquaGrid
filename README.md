@@ -1,8 +1,24 @@
-# 💧 AquaGrid — Spring Intelligence Workspace
+# 💧 AquaGrid — Spring Intelligence Workspace & Water Management System
 
 > **Offline-first spring monitoring, hydrogeological mapping, and decision-support workspace for sustainable groundwater and rural water grid management.**
 
 AquaGrid is an advanced hydrogeological intelligence and decision-support platform designed for spring shed revitalization and water security. It empowers field facilitators, hydrogeologists, and regional planners to capture field observations offline, analyze geospatial recharge zones, calculate transparent vulnerability and priority scoring, trace groundwater recharge pathways, and execute human-validated water conservation interventions.
+
+---
+
+## 📖 About the Project
+
+### 🎯 Problem Statement
+In mountainous and rural regions, millions depend directly on natural springs (dhara/chashma) for drinking water and subsistence agriculture. Due to climate variability, deforestation, and unmanaged catchment land use, thousands of perennial springs are drying up or becoming seasonal. Local water conservation teams often lack accessible geospatial tools, standard offline data capture systems, and transparent hydrogeological models to prioritize interventions effectively.
+
+### 💡 The Solution
+AquaGrid provides an end-to-end digital command center and field tool for spring shed management. Built with an offline-first architecture, field facilitators can log flow rates, water quality indicators, and geocoded spring observations without cellular connectivity. The platform couples these field readings with satellite elevation models, digital catchment boundary calculations, transparent rule-based priority matrices, and simulated recharge pathways, guiding planners to build the right recharge structures in the right locations.
+
+### 🌟 Core Value Proposition
+- **Offline Field Reliability**: Resilient local-device data queuing ensuring zero observation loss in deep valleys and remote rural zones.
+- **Science-Grounded Hydrogeology**: Integrates DEM terrain models, CHIRPS rainfall, and LULC satellite layers with simulated recharge tracing.
+- **Transparent Decision-Support**: Rule-based priority scoring with full provenance so field teams understand why specific interventions are recommended.
+- **Human-in-the-Loop Governance**: Segregates raw observations, indicative models, and verified interventions across tailored user roles.
 
 ---
 
@@ -83,7 +99,7 @@ pnpm install --frozen-lockfile
 ```
 
 ### 3. Configure Environment Variables
-Copy `.env.example` to `.env` and configure credentials:
+Copy `.env.example` to `.env`:
 ```bash
 cp .env.example .env
 ```
